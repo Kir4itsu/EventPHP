@@ -1,0 +1,16 @@
+-- Buat Database
+CREATE DATABASE IF NOT EXISTS event_komunitas;
+
+-- Gunakan Database
+USE event_komunitas;
+
+-- Buat Tabel
+CREATE TABLE IF NOT EXISTS events (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_event VARCHAR(255) NOT NULL,
+    tanggal DATE NOT NULL,
+    waktu TIME NOT NULL,
+    lokasi VARCHAR(255) NOT NULL,
+    deskripsi TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
